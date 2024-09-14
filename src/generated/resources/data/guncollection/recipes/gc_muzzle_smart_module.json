@@ -1,0 +1,20 @@
+{
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "count": 3,
+      "item": "guncollection:gc_weaponparts_plus"
+    },
+    {
+      "count": 7,
+      "item": "guncollection:gc_weaponparts_electronic"
+    },
+    {
+      "count": 3,
+      "tag": "forge:gems/amethyst"
+    }
+  ],
+  "result": {
+    "item": "guncollection:gc_muzzle_smart_module"
+  }
+}

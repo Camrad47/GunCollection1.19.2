@@ -1,0 +1,24 @@
+{
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "count": 1,
+      "item": "guncollection:gc_weaponparts_main"
+    },
+    {
+      "count": 3,
+      "item": "guncollection:gc_weaponparts_wood"
+    },
+    {
+      "count": 8,
+      "item": "guncollection:gc_weaponparts_plus"
+    },
+    {
+      "count": 3,
+      "item": "guncollection:gc_weaponparts_metal"
+    }
+  ],
+  "result": {
+    "item": "guncollection:gc_mauser_c96_trench_carbine"
+  }
+}
