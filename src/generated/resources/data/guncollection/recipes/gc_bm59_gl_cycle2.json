@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "guncollection:gc_bm59_gl"
+    }
+  ],
+  "result": {
+    "item": "guncollection:gc_bm59"
+  }
+}

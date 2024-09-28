@@ -26,7 +26,7 @@ import net.minecraftforge.registries.RegistryObject;
 public final class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, GunCollection.ID);
     public static final Item.Properties genericProperties = new Item.Properties().stacksTo(1).tab(GCinventoryTab.GUNCOLLECTIONTAB);
-    public static final Item.Properties altProperties = new Item.Properties().stacksTo(64);
+    public static final Item.Properties altProperties = new Item.Properties().stacksTo(64).tab(GCinventoryTab.GUNCOLLECTIONTAB);
 
     /* Guns */
     public static final RegistryObject<Item> GC_PP2000 = registerGun("gc_pp2000", false);
@@ -47,9 +47,11 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_PPSH_41 = registerGun("gc_ppsh_41", false);
     public static final RegistryObject<Item> GC_PPSH_DRUM = registerGun("gc_ppsh_drum", false);
     public static final RegistryObject<Item> GC_PPSH_TACTICAL = registerGun("gc_ppsh_tactical", false);
+    public static final RegistryObject<Item> GC_PPSH_CUSTOM = registerGun("gc_ppsh_custom", false);
     public static final RegistryObject<Item> GC_PPSH_OBREZ = registerGun("gc_ppsh_obrez", false);
     public static final RegistryObject<Item> GC_PPSH_MP41R = registerGun("gc_ppsh_mp41r", false);
     public static final RegistryObject<Item> GC_PPSH_K50M = registerGun("gc_ppsh_k50m", false);
+    public static final RegistryObject<Item> GC_PPD_34 = registerGun("gc_ppd_34", false);
     public static final RegistryObject<Item> GC_PPD_40 = registerGun("gc_ppd_40", false);
     public static final RegistryObject<Item> GC_PPD_40_PLANT202 = registerGun("gc_ppd_40_plant202", false);
     public static final RegistryObject<Item> GC_THOMPSON_M1928 = registerGun("gc_thompson_m1928", false);
@@ -83,6 +85,10 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_MAGNUM_REVOLVER_LONG = registerGun("gc_magnum_revolver_long", false);
     public static final RegistryObject<Item> GC_REVOLVER_410 = registerGun("gc_revolver_410", false);
     public static final RegistryObject<Item> GC_REVOLVER_RIFLE_PISTOL = registerGun("gc_revolver_rifle_pistol", false);
+    public static final RegistryObject<Item> GC_NAGANT = registerGun("gc_nagant", false);
+    public static final RegistryObject<Item> GC_NAGANT_SHORT = registerGun("gc_nagant_short", false);
+    public static final RegistryObject<Item> GC_NAGANT_BRAMIT = registerGun("gc_nagant_bramit", false);
+    public static final RegistryObject<Item> GC_NAGANT_44 = registerGun("gc_nagant_44", false);
     public static final RegistryObject<Item> GC_RSH12 = registerGun("gc_rsh12", false);
     public static final RegistryObject<Item> GC_RSH12_COMPACT = registerGun("gc_rsh12_compact", false);
     public static final RegistryObject<Item> GC_MAUSER_C96 = registerGun("gc_mauser_c96", false);
@@ -92,6 +98,8 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_METRALHADORA_PASAM = registerGun("gc_metralhadora_pasam", false);
     public static final RegistryObject<Item> GC_MAUSER_C96_TRENCH_CARBINE = registerGun("gc_mauser_c96_trench_carbine", false);
     public static final RegistryObject<Item> GC_P38_PISTOL = registerGun("gc_p38_pistol", false);
+    public static final RegistryObject<Item> GC_P38_SPECIAL = registerGun("gc_p38_special", false);
+    public static final RegistryObject<Item> GC_P38_AUTO_CARBINE = registerGun("gc_p38_auto_carbine", false);
     public static final RegistryObject<Item> GC_LUGER_PISTOL = registerGun("gc_luger_pistol", false);
     public static final RegistryObject<Item> GC_TOKAREV_TT = registerGun("gc_tokarev_tt", false);
     public static final RegistryObject<Item> GC_TOKAREV_TACTICAL = registerGun("gc_tokarev_tactical", false);
@@ -166,6 +174,11 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_AKU19 = registerGun("gc_aku19", false);
     public static final RegistryObject<Item> GC_AK308 = registerGun("gc_ak308", false);
     public static final RegistryObject<Item> GC_AK22 = registerGun("gc_ak22", false);
+    public static final RegistryObject<Item> GC_AKV521_545 = registerGun("gc_akv521_545", false);
+    public static final RegistryObject<Item> GC_AKV521_762 = registerGun("gc_akv521_762", false);
+    public static final RegistryObject<Item> GC_AKV521_223 = registerGun("gc_akv521_223", false);
+    public static final RegistryObject<Item> GC_AKV521_366 = registerGun("gc_akv521_366", false);
+    public static final RegistryObject<Item> GC_AKV521_CHANGABLE_UPPER = registerGun2("gc_akv521_changable_upper", false);
     public static final RegistryObject<Item> GC_AK_SAIGA308 = registerGun("gc_ak_saiga308", false);
     public static final RegistryObject<Item> GC_AK_366 = registerGun("gc_ak_366", false);
     public static final RegistryObject<Item> GC_AK_SCAV = registerGun("gc_ak_scav", false);
@@ -185,6 +198,7 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_AK_VZ58E = registerGun("gc_ak_vz58e", false);
     public static final RegistryObject<Item> GC_AK_VZ58_AP67 = registerGun("gc_ak_vz58_ap67", false);
     public static final RegistryObject<Item> GC_AK_VZ58_KLEC = registerGun("gc_ak_vz58_klec", false);
+    public static final RegistryObject<Item> GC_WZ88 = registerGun("gc_wz88", false);
     public static final RegistryObject<Item> GC_AK_VALMET = registerGun("gc_ak_valmet", false);
     public static final RegistryObject<Item> GC_AK_FALLOUT = registerGun("gc_ak_fallout", false);
     public static final RegistryObject<Item> GC_AK_ZASTAVA_M70 = registerGun("gc_ak_zastava_m70", false);
@@ -194,6 +208,7 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_AK_ZASTAVA_M77 = registerGun("gc_ak_zastava_m77", false);
     public static final RegistryObject<Item> GC_AK_ZASTAVA_M92 = registerGun("gc_ak_zastava_m92", false);
     public static final RegistryObject<Item> GC_AK_PRINTED = registerGun("gc_ak_printed", false);
+    public static final RegistryObject<Item> GC_AK_50_LITE = registerGun("gc_ak_50_lite", false);
     public static final RegistryObject<Item> GC_KK_MPI_69 = registerGun("gc_kk_mpi_69", false);
     public static final RegistryObject<Item> GC_AK9 = registerGun("gc_ak9", false);
     public static final RegistryObject<Item> GC_AK_BIZON = registerGun("gc_ak_bizon", false);
@@ -237,9 +252,15 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_AR15_SURVIVALIST = registerGun("gc_ar15_survivalist", false);
     public static final RegistryObject<Item> GC_AR15_50BEO = registerGun("gc_ar15_50beo", false);
     public static final RegistryObject<Item> GC_AR15_LWRC_M6 = registerGun("gc_ar15_lwrc_m6", false);
+    public static final RegistryObject<Item> GC_AB_762 = registerGun("gc_ab_762", false);
+    public static final RegistryObject<Item> GC_AB_545 = registerGun("gc_ab_545", false);
+    public static final RegistryObject<Item> GC_AVB_762 = registerGun("gc_avb_762", false);
+    public static final RegistryObject<Item> GC_AVB_762_LMG = registerGun("gc_avb_762_lmg", false);
+    public static final RegistryObject<Item> GC_LCZ_B20 = registerGun("gc_lcz_b20", false);
     public static final RegistryObject<Item> GC_FAMAS_F1 = registerGun("gc_famas_f1", false);
     public static final RegistryObject<Item> GC_FAMAS_G1 = registerGun("gc_famas_g1", false);
     public static final RegistryObject<Item> GC_FAMAS_VALORISE = registerGun("gc_famas_valorise", false);
+    public static final RegistryObject<Item> GC_NORINCO_86S = registerGun("gc_norinco_86s", false);
     public static final RegistryObject<Item> GC_WINCHESTER_1907_RIFLE = registerGun("gc_winchester_1907_rifle", false);
     public static final RegistryObject<Item> GC_WINCHESTER_1907_CARBINE = registerGun("gc_winchester_1907_carbine", false);
     public static final RegistryObject<Item> GC_VARMINT_RIFLE = registerGun("gc_varmint_rifle", false);
@@ -250,6 +271,7 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_LEVER_ACTION_RIFLE_LONG = registerGun("gc_lever_action_rifle_long", false);
     public static final RegistryObject<Item> GC_LEVER_ACTION_RIFLE = registerGun("gc_lever_action_rifle", false);
     public static final RegistryObject<Item> GC_LEVER_ACTION_RIFLE_CUT = registerGun("gc_lever_action_rifle_cut", false);
+    public static final RegistryObject<Item> GC_LEVER_ACTION_RIFLE_SINGLE = registerGun("gc_lever_action_rifle_single", false);
     public static final RegistryObject<Item> GC_LEVER_ACTION_RIFLE_LONG_BAYONET = registerGun("gc_lever_action_rifle_long_bayonet", false);
     public static final RegistryObject<Item> GC_WINCHESTER_M1895 = registerGun("gc_winchester_m1895", false);
     public static final RegistryObject<Item> GC_WINCHESTER_M1895_3006 = registerGun("gc_winchester_m1895_3006", false);
@@ -280,6 +302,7 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_MOSIN_TOKAREV = registerGun("gc_mosin_tokarev", false);
     public static final RegistryObject<Item> GC_MOSIN_SNIPER_OBREZ = registerGun("gc_mosin_sniper_obrez", false);
     public static final RegistryObject<Item> GC_MOSIN_SNIPER = registerGun("gc_mosin_sniper", false);
+    public static final RegistryObject<Item> GC_MOSIN_BRAMIT = registerGun("gc_mosin_bramit", false);
     public static final RegistryObject<Item> GC_MOSIN_TYPE53 = registerGun("gc_mosin_type53", false);
     public static final RegistryObject<Item> GC_SVT38 = registerGun("gc_svt38", false);
     public static final RegistryObject<Item> GC_SVT40 = registerGun("gc_svt40", false);
@@ -287,8 +310,14 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_SVT40_OBREZ = registerGun("gc_svt40_obrez", false);
     public static final RegistryObject<Item> GC_AVT40 = registerGun("gc_avt40", false);
     public static final RegistryObject<Item> GC_AVT40_OBREZ = registerGun("gc_avt40_obrez", false);
+    public static final RegistryObject<Item> GC_AVT40_DRUM = registerGun("gc_avt40_drum", false);
     public static final RegistryObject<Item> GC_AT44 = registerGun("gc_at44", false);
     public static final RegistryObject<Item> GC_FEDOROV_AVTOMAT = registerGun("gc_fedorov_avtomat", false);
+    public static final RegistryObject<Item> GC_FEDOROV_LMG = registerGun("gc_fedorov_lmg", false);
+    public static final RegistryObject<Item> GC_M1_CARBINE = registerGun("gc_m1_carbine", false);
+    public static final RegistryObject<Item> GC_M2_CARBINE = registerGun("gc_m2_carbine", false);
+    public static final RegistryObject<Item> GC_M3_CARBINE = registerGun("gc_m3_carbine", false);
+    public static final RegistryObject<Item> GC_M1_CARBINE_ENFORCER = registerGun("gc_m1_carbine_enforcer", false);
     public static final RegistryObject<Item> GC_M1_GARAND = registerGun("gc_m1_garand", false);
     public static final RegistryObject<Item> GC_M1_GARAND_T20 = registerGun("gc_m1_garand_t20", false);
     public static final RegistryObject<Item> GC_M1_GARAND_TANKER = registerGun("gc_m1_garand_tanker", false);
@@ -297,6 +326,9 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_M14_FOLDING = registerGun("gc_m14_folding", false);
     public static final RegistryObject<Item> GC_M14_FOLDED = registerGun1("gc_m14_folded", false);
     public static final RegistryObject<Item> GC_M305A = registerGun("gc_m305a", false);
+    public static final RegistryObject<Item> GC_BM59 = registerGun("gc_bm59", false);
+    public static final RegistryObject<Item> GC_BM59_PARA = registerGun("gc_bm59_para", false);
+    public static final RegistryObject<Item> GC_BM59_GL = registerGun("gc_bm59_gl", false);
     public static final RegistryObject<Item> GC_L1A1 = registerGun("gc_l1a1", false);
     public static final RegistryObject<Item> GC_FN_FAL = registerGun("gc_fn_fal", false);
     public static final RegistryObject<Item> GC_FN_FAL_PARA = registerGun("gc_fn_fal_para", false);
@@ -308,8 +340,10 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_FN_FALO = registerGun("gc_fn_falo", false);
     public static final RegistryObject<Item> GC_L2A1 = registerGun("gc_l2a1", false);
     public static final RegistryObject<Item> GC_OW_SALVO = registerGun("gc_ow_salvo", false);
+    public static final RegistryObject<Item> GC_FDI_PROTOTYPE_000 = registerGun("gc_fdi_prototype_000", false);
     public static final RegistryObject<Item> GC_SVD = registerGun("gc_svd", false);
     public static final RegistryObject<Item> GC_SVD_V70 = registerGun("gc_svd_v70", false);
+    public static final RegistryObject<Item> GC_SVD_AF = registerGun("gc_svd_af", false);
     public static final RegistryObject<Item> GC_AK_HUNTER = registerGun("gc_ak_hunter", false);
     public static final RegistryObject<Item> GC_AK_PSL = registerGun("gc_ak_psl", false);
     public static final RegistryObject<Item> GC_AK_ZASTAVA_M76 = registerGun("gc_ak_zastava_m76", false);
@@ -399,6 +433,13 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_PISTOL = registerGun("gc_pistol", false);
     public static final RegistryObject<Item> GC_BLACK_POWDER_REVOLVER = registerGun("gc_black_powder_revolver", false);
     public static final RegistryObject<Item> GC_BOMB_LAUNCHER = registerGun("gc_bomb_launcher", false);
+    public static final RegistryObject<Item> GC_HCAS_AR_1 = registerGun("gc_hcas_ar_1", false);
+    public static final RegistryObject<Item> GC_HCAS_AR = registerGun("gc_hcas_ar", false);
+    public static final RegistryObject<Item> GC_HCAS_DMR_1 = registerGun("gc_hcas_dmr_1", false);
+    public static final RegistryObject<Item> GC_HCAS_DMR = registerGun("gc_hcas_dmr", false);
+    public static final RegistryObject<Item> GC_HCAS_CCW_1 = registerGun("gc_hcas_ccw_1", false);
+    public static final RegistryObject<Item> GC_HCAS_CCW = registerGun("gc_hcas_ccw", false);
+    public static final RegistryObject<Item> GC_HCAS_PARTS = registerGun2("gc_hcas_parts", false);
 
     public static final RegistryObject<Item> GC_SIGHT_KOBRA = ITEMS.register("gc_sight_kobra", () -> new ScopeItem(Scope.builder().additionalZoom(0.15F).reticleOffset(1.75F).viewFinderOffset(0.4).modifiers(GunModifiers.SLOW_ADS).build(), genericProperties));
     public static final RegistryObject<Item> GC_SIGHT_VALDAY = ITEMS.register("gc_sight_valday", () -> new ScopeItem(Scope.builder().additionalZoom(0.15F).reticleOffset(1.75F).viewFinderOffset(0.4).modifiers(GunModifiers.SLOW_ADS).build(), genericProperties));
@@ -414,6 +455,8 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_SIGHT_NVG = ITEMS.register("gc_sight_nvg", () -> new ScopeItem(Scope.builder().additionalZoom(0.55F).reticleOffset(2.35F).viewFinderOffset(-0.3).modifiers(GunModifiers.SLOWER_ADS).build(), genericProperties));
     public static final RegistryObject<Item> GC_SIGHT_ACOG = ITEMS.register("gc_sight_acog", () -> new ScopeItem(Scope.builder().aimFovModifier(0.35F).reticleOffset(1.4F).viewFinderDistance(1.4).modifiers(GunModifiers.SLOWER_ADS).build(), genericProperties));
     public static final RegistryObject<Item> GC_SIGHT_ACOG_TAN = ITEMS.register("gc_sight_acog_tan", () -> new ScopeItem(Scope.builder().aimFovModifier(0.35F).reticleOffset(1.4F).viewFinderDistance(1.4).modifiers(GunModifiers.SLOWER_ADS).build(), genericProperties));
+    public static final RegistryObject<Item> GC_SIGHT_ACOG_RMR = ITEMS.register("gc_sight_acog_rmr", () -> new ScopeItem(Scope.builder().aimFovModifier(0.35F).reticleOffset(1.4F).viewFinderDistance(1.4).modifiers(GunModifiers.SLOWER_ADS).build(), genericProperties));
+    public static final RegistryObject<Item> GC_SIGHT_ACOG_RMR_ACTIVE = ITEMS.register("gc_sight_acog_rmr_active", () -> new ScopeItem(Scope.builder().additionalZoom(0.15F).reticleOffset(2.7F).viewFinderOffset(0.4).modifiers(GunModifiers.SLOW_ADS).build(), genericProperties));
     public static final RegistryObject<Item> GC_SIGHT_OPTIC = ITEMS.register("gc_sight_optic", () -> new ScopeItem(Scope.builder().aimFovModifier(0.24F).reticleOffset(1.4F).viewFinderDistance(1.4).modifiers(GunModifiers.SLOWER_ADS).build(), genericProperties));
     public static final RegistryObject<Item> GC_SIGHT_OPTIC_LONG = ITEMS.register("gc_sight_optic_long", () -> new ScopeItem(Scope.builder().aimFovModifier(0.18F).reticleOffset(1.4F).viewFinderDistance(1.4).modifiers(MoreGunModifiers.EVEN_LESS_ADS).build(), genericProperties));
     public static final RegistryObject<Item> GC_SIGHT_OPTIC_TAN = ITEMS.register("gc_sight_optic_tan", () -> new ScopeItem(Scope.builder().aimFovModifier(0.24F).reticleOffset(1.4F).viewFinderDistance(1.4).modifiers(GunModifiers.SLOWER_ADS).build(), genericProperties));
@@ -429,7 +472,8 @@ public final class ItemRegistry {
 
     public static final RegistryObject<Item> GC_MUZZLE_SILENCER = ITEMS.register("gc_muzzle_silencer", () -> new BarrelItem(Barrel.create(6.1f, MoreGunModifiers.SILENCED_1, GunModifiers.REDUCED_DAMAGE), genericProperties));
     public static final RegistryObject<Item> GC_MUZZLE_SILENCER_COVER = ITEMS.register("gc_muzzle_silencer_cover", () -> new BarrelItem(Barrel.create(6.1f, MoreGunModifiers.SILENCED_1, GunModifiers.REDUCED_DAMAGE), genericProperties));
-    public static final RegistryObject<Item> GC_MUZZLE_COMPENSATOR = ITEMS.register("gc_muzzle_compensator", () -> new BarrelItem(Barrel.create(0.2f, GunModifiers.LIGHT_RECOIL, GunModifiers.REDUCED_DAMAGE), genericProperties));
+    public static final RegistryObject<Item> GC_MUZZLE_COMPENSATOR = ITEMS.register("gc_muzzle_compensator", () -> new BarrelItem(Barrel.create(0.2f, GunModifiers.LIGHT_RECOIL, MoreGunModifiers.SLIGHTLY_LESS_DAMAGE), genericProperties));
+    public static final RegistryObject<Item> GC_MUZZLE_BRAKE = ITEMS.register("gc_muzzle_brake", () -> new BarrelItem(Barrel.create(0.2f, MoreGunModifiers.THE_MUZZLE_BRAKE, MoreGunModifiers.SLIGHTLY_LESS_DAMAGE), genericProperties));
     public static final RegistryObject<Item> GC_MUZZLE_SMART_MODULE = ITEMS.register("gc_muzzle_smart_module", () -> new BarrelItem(Barrel.create(0f,MoreGunModifiers.SMART_MODULE), genericProperties));
     public static final RegistryObject<Item> GC_MUZZLE_WAFFLE_SILENCER = ITEMS.register("gc_muzzle_waffle_silencer", () -> new BarrelItem(Barrel.create(6.1f, MoreGunModifiers.SILENCED_1, GunModifiers.REDUCED_DAMAGE, MoreGunModifiers.SOME_CONTROL), genericProperties));
 
@@ -451,12 +495,12 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_VERTICAL_GRIP_ANGLED_LASER = ITEMS.register("gc_vertical_grip_angled_laser", () -> new UnderBarrelItem(UnderBarrel.create(MoreGunModifiers.ERGONOMIC_GRIP, MoreGunModifiers.LASER_POINTER), genericProperties));
     public static final RegistryObject<Item> GC_VERTICAL_GRIP_COBRA_LASER = ITEMS.register("gc_vertical_grip_cobra_laser", () -> new UnderBarrelItem(UnderBarrel.create(MoreGunModifiers.ERGONOMIC_GRIP, MoreGunModifiers.LASER_POINTER), genericProperties));
 
-    public static final RegistryObject<Item> GC_WOOD_STOCK = ITEMS.register("gc_wood_stock", () -> new StockItem(Stock.create(MoreGunModifiers.WOOD_STOCK), new Item.Properties().stacksTo(1), false));
-    public static final RegistryObject<Item> GC_METAL_STOCK = ITEMS.register("gc_metal_stock", () -> new StockItem(Stock.create(MoreGunModifiers.METAL_STOCK), new Item.Properties().stacksTo(1), false));
-    public static final RegistryObject<Item> GC_POLYMER_STOCK = ITEMS.register("gc_polymer_stock", () -> new StockItem(Stock.create(MoreGunModifiers.POLYMER_STOCK), new Item.Properties().stacksTo(1), false));
-    public static final RegistryObject<Item> GC_MARKSMAN_STOCK = ITEMS.register("gc_marksman_stock", () -> new StockItem(Stock.create(MoreGunModifiers.MARKSMAN_STOCK), new Item.Properties().stacksTo(1), false));
-    public static final RegistryObject<Item> GC_ULTRA_LIGHT_STOCK = ITEMS.register("gc_ultra_light_stock", () -> new StockItem(Stock.create(MoreGunModifiers.ULTRA_LIGHT_STOCK), new Item.Properties().stacksTo(1), false));
-    public static final RegistryObject<Item> GC_TACTICAL_SNIPER_STOCK = ITEMS.register("gc_tactical_sniper_stock", () -> new StockItem(Stock.create(MoreGunModifiers.TACTICAL_SNIPER_STOCK), new Item.Properties().stacksTo(1), false));
+    public static final RegistryObject<Item> GC_WOOD_STOCK = ITEMS.register("gc_wood_stock", () -> new StockItem(Stock.create(MoreGunModifiers.WOOD_STOCK), genericProperties));
+    public static final RegistryObject<Item> GC_METAL_STOCK = ITEMS.register("gc_metal_stock", () -> new StockItem(Stock.create(MoreGunModifiers.METAL_STOCK), genericProperties));
+    public static final RegistryObject<Item> GC_POLYMER_STOCK = ITEMS.register("gc_polymer_stock", () -> new StockItem(Stock.create(MoreGunModifiers.POLYMER_STOCK), genericProperties));
+    public static final RegistryObject<Item> GC_MARKSMAN_STOCK = ITEMS.register("gc_marksman_stock", () -> new StockItem(Stock.create(MoreGunModifiers.MARKSMAN_STOCK), genericProperties));
+    public static final RegistryObject<Item> GC_ULTRA_LIGHT_STOCK = ITEMS.register("gc_ultra_light_stock", () -> new StockItem(Stock.create(MoreGunModifiers.ULTRA_LIGHT_STOCK), genericProperties));
+    public static final RegistryObject<Item> GC_TACTICAL_SNIPER_STOCK = ITEMS.register("gc_tactical_sniper_stock", () -> new StockItem(Stock.create(MoreGunModifiers.TACTICAL_SNIPER_STOCK), genericProperties));
 
     public static final RegistryObject<Item> GC_AMMO_BOX_762x39 = registerGun("gc_ammo_box_762x39", false);
 
@@ -487,6 +531,7 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_AMMO_40SW = registerAmmo("gc_ammo_40sw");
     public static final RegistryObject<Item> GC_AMMO_366 = registerAmmo("gc_ammo_366");
     public static final RegistryObject<Item> GC_AMMO_762X25 = registerAmmo("gc_ammo_762x25");
+    public static final RegistryObject<Item> GC_AMMO_762_NAGANT = registerAmmo("gc_ammo_762_nagant");
     public static final RegistryObject<Item> GC_AMMO_RIFLE_GRENADE = registerAmmo("gc_ammo_rifle_grenade");
     public static final RegistryObject<Item> GC_AMMO_VOG25 = registerAmmo("gc_ammo_vog25");
     public static final RegistryObject<Item> GC_AMMO_30X29 = registerAmmo("gc_ammo_30x29");
@@ -501,13 +546,16 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_AMMO_65X50 = registerAmmo("gc_ammo_65x50");
     public static final RegistryObject<Item> GC_AMMO_PAPER_CARTRIDGE = registerAmmo("gc_ammo_paper_cartridge");
     public static final RegistryObject<Item> GC_AMMO_BOMB = registerAmmo("gc_ammo_bomb");
-    public static final RegistryObject<Item> GC_AMMO_PG7V = ITEMS.register("gc_ammo_pg7v", () -> new AmmoItem(new Item.Properties().stacksTo(3)));
-    public static final RegistryObject<Item> GC_AMMO_OG7V = ITEMS.register("gc_ammo_og7v", () -> new AmmoItem(new Item.Properties().stacksTo(3)));
-    public static final RegistryObject<Item> GC_AMMO_TBG7 = ITEMS.register("gc_ammo_tbg7", () -> new AmmoItem(new Item.Properties().stacksTo(2)));
-    public static final RegistryObject<Item> GC_AMMO_PG7VR = ITEMS.register("gc_ammo_pg7vr", () -> new AmmoItem(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> GC_AMMO_3X40 = ITEMS.register("gc_ammo_3x40", () -> new AmmoItem(new Item.Properties().stacksTo(3)));
-    public static final RegistryObject<Item> GC_AMMO_RSPRGR = ITEMS.register("gc_ammo_rsprgr", () -> new AmmoItem(new Item.Properties().stacksTo(9)));
+    public static final RegistryObject<Item> GC_AMMO_PG7V = ITEMS.register("gc_ammo_pg7v", () -> new AmmoItem(new Item.Properties().stacksTo(3).tab(GCinventoryTab.GUNCOLLECTIONTAB)));
+    public static final RegistryObject<Item> GC_AMMO_OG7V = ITEMS.register("gc_ammo_og7v", () -> new AmmoItem(new Item.Properties().stacksTo(3).tab(GCinventoryTab.GUNCOLLECTIONTAB)));
+    public static final RegistryObject<Item> GC_AMMO_TBG7 = ITEMS.register("gc_ammo_tbg7", () -> new AmmoItem(new Item.Properties().stacksTo(2).tab(GCinventoryTab.GUNCOLLECTIONTAB)));
+    public static final RegistryObject<Item> GC_AMMO_PG7VR = ITEMS.register("gc_ammo_pg7vr", () -> new AmmoItem(new Item.Properties().stacksTo(1).tab(GCinventoryTab.GUNCOLLECTIONTAB)));
+    public static final RegistryObject<Item> GC_AMMO_3X40 = ITEMS.register("gc_ammo_3x40", () -> new AmmoItem(new Item.Properties().stacksTo(3).tab(GCinventoryTab.GUNCOLLECTIONTAB)));
+    public static final RegistryObject<Item> GC_AMMO_RSPRGR = ITEMS.register("gc_ammo_rsprgr", () -> new AmmoItem(new Item.Properties().stacksTo(9).tab(GCinventoryTab.GUNCOLLECTIONTAB)));
     public static final RegistryObject<Item> GC_AMMO_762X39_AIRBURST = registerAmmo("gc_ammo_762x39_airburst");
+    public static final RegistryObject<Item> GC_AMMO_23HENSAP_1 = ITEMS.register("gc_ammo_23hensap_1", () -> new AmmoItem(new Item.Properties().stacksTo(40).tab(GCinventoryTab.GUNCOLLECTIONTAB)));
+    public static final RegistryObject<Item> GC_AMMO_23HENSAP = ITEMS.register("gc_ammo_23hensap", () -> new AmmoItem(new Item.Properties().stacksTo(40).tab(GCinventoryTab.GUNCOLLECTIONTAB)));
+
 
     public static final RegistryObject<Item> GC_AMMOPACK_762X39 = registerAmmoPack("gc_ammopack_762x39");
     public static final RegistryObject<Item> GC_AMMOPACK_545X39 = registerAmmoPack("gc_ammopack_545x39");
@@ -536,6 +584,7 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_AMMOPACK_40SW = registerAmmoPack("gc_ammopack_40sw");
     public static final RegistryObject<Item> GC_AMMOPACK_366 = registerAmmoPack("gc_ammopack_366");
     public static final RegistryObject<Item> GC_AMMOPACK_762X25 = registerAmmoPack("gc_ammopack_762x25");
+    public static final RegistryObject<Item> GC_AMMOPACK_762_NAGANT = registerAmmo("gc_ammopack_762_nagant");
     public static final RegistryObject<Item> GC_AMMOPACK_38SPC = registerAmmoPack("gc_ammopack_38spc");
     public static final RegistryObject<Item> GC_AMMOPACK_3006 = registerAmmoPack("gc_ammopack_3006");
     public static final RegistryObject<Item> GC_AMMOPACK_30CARBINE = registerAmmoPack("gc_ammopack_30carbine");
@@ -560,7 +609,6 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> GC_GUNPOWDER_T2 = registerAmmoParts("gc_gunpowder_t2");
     public static final RegistryObject<Item> GC_GUNPOWDER_T3 = registerAmmoParts("gc_gunpowder_t3");
 
-
     /**
      * Helper method used to register guns
      *
@@ -569,16 +617,17 @@ public final class ItemRegistry {
      * @return The registered gun
      */
     private static RegistryObject<Item> registerGun(String name, boolean canColor) {
-        return ITEMS.register(name, () -> new GunCollectionItem(genericProperties, canColor, new EnchantmentWrapperGC[]{new EnchantmentWrapperGC(ModEnchantments.QUICK_HANDS,-4)}));
+        return ITEMS.register(name, () -> new GunCollectionItem(genericProperties, true));
+    }
+
+    private static RegistryObject<Item> registerGun2(String name, boolean canColor) {
+        return ITEMS.register(name, () -> new GunCollection_alt_Item(genericProperties, true));
     }
 
     private static RegistryObject<Item> registerGun1(String name, boolean canColor) {
-        return ITEMS.register(name, () -> new GunCollectionItem(altProperties, true, new EnchantmentWrapperGC[]{new EnchantmentWrapperGC(ModEnchantments.QUICK_HANDS,-4)}));
+        return ITEMS.register(name, () -> new GunCollectionItem(altProperties, true));
     }
 
-    private static RegistryObject<Item> registerGunItem(String name, boolean canColor) {
-        return ITEMS.register(name, () -> new GunItem(genericProperties));
-    }
     /**
      * Helper method used to register new ammunition.
      *
@@ -598,9 +647,7 @@ public final class ItemRegistry {
     private static RegistryObject<Item> registerAmmoPack(String name) {
         return ITEMS.register(name, () -> new AmmoPackItem(new Item.Properties().tab(GCinventoryTab.GUNCOLLECTIONTAB)));
     }
-    private static RegistryObject<Item> registerSurvivalist(String name) {
-        return ITEMS.register(name, () -> new SurvivalistRifleItem(new Item.Properties()));
-    }
+
 
 
 

@@ -21,10 +21,10 @@
     "life": 90
   },
   "sounds": {
-    "fire": "guncollection:item.rifle.suppressed",
+    "fire": "guncollection:item.gc_mosin_silenced.suppressed",
     "reload": "guncollection:item.gc_mosin_load.reload",
     "cock": "guncollection:item.gc_bolt_rifle.cock",
-    "silencedFire": "guncollection:item.rifle.suppressed"
+    "silencedFire": "guncollection:item.gc_mosin_silenced.suppressed"
   },
   "modules": {
     "zoom": {

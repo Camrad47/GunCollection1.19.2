@@ -1,10 +1,10 @@
 modLoader="javafml"
-loaderVersion="[25,)"
+loaderVersion="[35,)"
 license="P BLEH"
 
 [[mods]]
     modId="guncollection"
-    version="0.5.2a"
+    version="0.5.5"
     displayName="Gun Collection"
     authors="That one concrete guy, forgot his name"
     credits="That one concrete guy, forgot his name"
@@ -31,7 +31,7 @@ license="P BLEH"
 [[dependencies.guncollection]]
     modId="framework"
     mandatory=true
-    versionRange="[0.1.1,)"
+    versionRange="[0.0.1,)"
     ordering="NONE"
     side="BOTH"
 

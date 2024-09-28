@@ -1,0 +1,34 @@
+{
+  "general": {
+    "auto": false,
+    "rate": 9,
+    "gripType": "cgm:one_handed",
+    "maxAmmo": 7,
+    "reloadAmount": 1,
+    "recoilAngle": 2.7,
+    "recoilKick": 0.9,
+    "recoilAdsReduction": 0.15,
+    "alwaysSpread": true,
+    "spread": 1.1
+  },
+  "projectile": {
+    "item": "guncollection:gc_ammo_762_nagant",
+    "visible": false,
+    "damage": 5.1,
+    "size": 0.1,
+    "speed": 35.0,
+    "life": 30
+  },
+  "sounds": {
+    "fire": "guncollection:item.rifle.suppressed",
+    "reload": "cgm:item.pistol.reload",
+    "cock": "cgm:item.assault_rifle.cock"
+  },
+  "modules": {
+    "zoom": {
+      "fovModifier": 0.7,
+      "yOffset": 4.1,
+      "zOffset": 1.5
+    }
+  }
+}

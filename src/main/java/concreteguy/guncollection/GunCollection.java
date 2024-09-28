@@ -16,9 +16,7 @@ import concreteguy.guncollection.entities.*;
 import concreteguy.guncollection.init.EntityInit;
 import com.mrcrayfish.guns.network.PacketHandler;
 import concreteguy.guncollection.client.ClientHandler;
-import concreteguy.guncollection.client.MoreKeyBinds;
 import concreteguy.guncollection.config.Config;
-import concreteguy.guncollection.datagen.ModRecipeGenerator;
 import concreteguy.guncollection.core.registry.ItemRegistry;
 import concreteguy.guncollection.core.registry.SoundRegistry;
 import net.minecraft.core.NonNullList;
@@ -60,18 +58,7 @@ import java.util.function.BiConsumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-
-import static concreteguy.guncollection.init.EntityInit.GC_AMMO_RIFLE_GRENADE;
-import static concreteguy.guncollection.init.EntityInit.GC_AMMO_VOG25;
-import static concreteguy.guncollection.init.EntityInit.GC_AMMO_30X29;
-import static concreteguy.guncollection.init.EntityInit.GC_AMMO_BOMB;
-import static concreteguy.guncollection.init.EntityInit.GC_AMMO_PG7V;
-import static concreteguy.guncollection.init.EntityInit.GC_AMMO_OG7V;
-import static concreteguy.guncollection.init.EntityInit.GC_AMMO_TBG7;
-import static concreteguy.guncollection.init.EntityInit.GC_AMMO_PG7VR;
-import static concreteguy.guncollection.init.EntityInit.GC_AMMO_3X40;
-import static concreteguy.guncollection.init.EntityInit.GC_AMMO_762X39_AIRBURST;
-import static concreteguy.guncollection.init.EntityInit.GC_AMMO_RSPRGR;
+import static concreteguy.guncollection.init.EntityInit.*;
 
 /**
  * @author Beton
@@ -99,9 +86,8 @@ public class GunCollection
 
         bus.addListener(this::clientSetup);
         bus.addListener(this::setup);
-        bus.addListener(this::gatherData);
         bus.addListener(this::commonSetup);
-        bus.addListener(MoreKeyBinds::registerKeyMappings);
+        bus.addListener(this::serverSetup);
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
@@ -116,6 +102,10 @@ public class GunCollection
 
     }
 
+    private void serverSetup(final FMLClientSetupEvent event) {
+        event.enqueueWork(ClientHandler::registerModelOverrides);
+    }
+
     private void setup(final FMLCommonSetupEvent event) {
 
         ProjectileManager.getInstance().registerFactory(ItemRegistry.GC_AMMO_RIFLE_GRENADE.get(), (worldIn, entity, weapon, item, modifiedGun) -> new RifleGrenadeEntity (GC_AMMO_RIFLE_GRENADE.get(), worldIn, entity, weapon, item, modifiedGun));
@@ -128,13 +118,9 @@ public class GunCollection
         ProjectileManager.getInstance().registerFactory(ItemRegistry.GC_AMMO_PG7VR.get(), (worldIn, entity, weapon, item, modifiedGun) -> new rpgGrenadeTandemEntity(GC_AMMO_PG7VR.get(), worldIn, entity, weapon, item, modifiedGun));
         ProjectileManager.getInstance().registerFactory(ItemRegistry.GC_AMMO_3X40.get(), (worldIn, entity, weapon, item, modifiedGun) -> new agiGrenadeEntity(GC_AMMO_3X40.get(), worldIn, entity, weapon, item, modifiedGun));
         ProjectileManager.getInstance().registerFactory(ItemRegistry.GC_AMMO_762X39_AIRBURST.get(), (worldIn, entity, weapon, item, modifiedGun) -> new ExplosiveProjectileEntity(GC_AMMO_762X39_AIRBURST.get(), worldIn, entity, weapon, item, modifiedGun));
+        ProjectileManager.getInstance().registerFactory(ItemRegistry.GC_AMMO_23HENSAP.get(), (worldIn, entity, weapon, item, modifiedGun) -> new ExplosiveProjectileEntity(GC_AMMO_23HENSAP.get(), worldIn, entity, weapon, item, modifiedGun));
         ProjectileManager.getInstance().registerFactory(ItemRegistry.GC_AMMO_RSPRGR.get(), (worldIn, entity, weapon, item, modifiedGun) -> new rpgGrenadeHEEntity(GC_AMMO_RSPRGR.get(), worldIn, entity, weapon, item, modifiedGun));
 
-    }
-
-    private void gatherData(final GatherDataEvent event) {
-        DataGenerator generator = event.getGenerator();
-        generator.addProvider(event.includeServer(), new RecipeGen(generator));
     }
 
 

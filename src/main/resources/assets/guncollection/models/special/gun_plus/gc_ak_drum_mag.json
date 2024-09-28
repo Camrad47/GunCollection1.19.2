@@ -272,12 +272,7 @@
 			}
 		}
 	],
-	"display": {
-		"thirdperson_righthand": {
-			"rotation": [25, 0, 0],
-			"translation": [0, 3.5, 3]
-		}
-	},
+	"display": {},
 	"groups": [
 		{
 			"name": "group",

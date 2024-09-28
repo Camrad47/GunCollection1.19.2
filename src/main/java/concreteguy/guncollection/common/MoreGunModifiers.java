@@ -75,12 +75,42 @@ public class MoreGunModifiers
         }
     };
 
+    public static final IGunModifier SLIGHTLY_LESS_DAMAGE = new IGunModifier()
+    {
+        @Override
+        public float modifyProjectileDamage(float damage) {
+            return damage * 0.95F;
+        }
+    };
+
     public static final IGunModifier ERGONOMIC_GRIP = new IGunModifier()
     {
         @Override
         public double modifyAimDownSightSpeed(double speed)
         {
             return speed * 1.3F;
+        }
+    };
+
+    public static final IGunModifier THE_MUZZLE_BRAKE = new IGunModifier()
+    {
+        public int modifyFireRate(int rate) {
+            return Mth.clamp((int)((double)rate * 0.8), rate - 1, Integer.MAX_VALUE);
+        }
+        public float recoilModifier() {
+            return 1.25F;
+        }
+
+        public float kickModifier() {
+            return 1.45F;
+        }
+
+        public double modifyAimDownSightSpeed(double speed) {
+            return speed * 1.3000000476837158;
+        }
+
+        public float modifyProjectileSpread(float spread) {
+            return spread * 0.9F;
         }
     };
 

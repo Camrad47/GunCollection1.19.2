@@ -1,0 +1,41 @@
+package concreteguy.guncollection.client.render.gun.model;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Vector3f;
+import com.mrcrayfish.guns.client.render.gun.IOverrideModel;
+import com.mrcrayfish.guns.client.util.RenderUtil;
+import com.mrcrayfish.guns.common.Gun;
+import concreteguy.guncollection.client.SpecialModels;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.block.model.ItemTransforms;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+
+import javax.annotation.Nullable;
+
+public class gc_bm59_gl_customModel implements IOverrideModel {
+
+
+    @Override
+    public void render(float partialTicks, ItemTransforms.TransformType transformType, ItemStack stack, ItemStack parent, @Nullable LivingEntity entity, PoseStack poseStack, MultiBufferSource buffer, int light, int overlay)
+    {
+        poseStack.pushPose();
+        poseStack.mulPose(Vector3f.XN.rotationDegrees(-15F));
+        RenderUtil.renderModel(SpecialModels.GC_BM59_GL_MAIN.getModel(), stack, poseStack, buffer, light, overlay);
+        poseStack.popPose();
+
+        poseStack.pushPose();
+        poseStack.mulPose(Vector3f.XN.rotationDegrees(-15F));
+        RenderUtil.renderModel(SpecialModels.GC_BM59_GL_SIGHT_UP.getModel(), stack, poseStack, buffer, light, overlay);
+        poseStack.popPose();
+
+        if (Gun.hasAmmo(stack)){
+        poseStack.mulPose(Vector3f.XN.rotationDegrees(-15F));
+        RenderUtil.renderModel(SpecialModels.GC_BM59_GL_GRENADE.getModel(), stack, poseStack, buffer, light, overlay);}
+    }
+
+    private double easeInOutBack(double x)
+    {
+        return 1 - Math.pow(1 - (2 * x), 4);
+    }
+}

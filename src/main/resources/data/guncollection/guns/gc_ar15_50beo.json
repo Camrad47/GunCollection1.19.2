@@ -24,7 +24,7 @@
     "fire": "guncollection:item.gc_ar15_survivalist.fire",
     "reload": "cgm:item.pistol.reload",
     "cock": "guncollection:item.gc_ar15.cock",
-    "silencedFire": "guncollection:item.pistol.suppressed"
+    "silencedFire": "guncollection:item.gc_akm_silenced.suppressed"
   },
   "display": {
     "flash": {

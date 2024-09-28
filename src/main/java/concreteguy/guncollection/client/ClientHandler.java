@@ -1,40 +1,14 @@
 package concreteguy.guncollection.client;
 
-import com.mrcrayfish.guns.client.KeyBinds;
-import com.mrcrayfish.guns.client.render.gun.model.GrenadeLauncherModel;
-import concreteguy.guncollection.client.MoreKeyBinds;
+import com.mrcrayfish.guns.client.render.gun.ModelOverrides;
 import com.mrcrayfish.guns.client.render.gun.model.SimpleModel;
-import com.mrcrayfish.guns.network.PacketHandler;
-import com.mrcrayfish.guns.network.message.C2SMessageAttachments;
 import concreteguy.guncollection.client.render.gun.model.*;
 import concreteguy.guncollection.core.registry.ItemRegistry;
-import com.mrcrayfish.guns.client.render.gun.ModelOverrides;
-import net.minecraft.client.Minecraft;
-import net.minecraftforge.client.event.InputEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import org.lwjgl.glfw.GLFW;
 
 /**
  * @author Beton
  */
 public class ClientHandler {
-
-    @SubscribeEvent
-    public static void onKeyPressed(InputEvent.Key event)
-    {
-        Minecraft mc = Minecraft.getInstance();
-        if(mc.player != null && mc.screen == null && event.getAction() == GLFW.GLFW_PRESS)
-        {
-            if(MoreKeyBinds.KEY_ALTERNATE.isDown())
-            {
-
-            }
-            /*else if(event.getKey() == GLFW.GLFW_KEY_KP_9)
-            {
-                mc.setScreen(new EditorScreen(null, new Debug.Menu()));
-            }*/
-        }
-    }
 
     public static void registerModelOverrides() {
         ModelOverrides.register(ItemRegistry.GC_PP2000.get(), new gc_pp2000_customModel());
@@ -408,5 +382,47 @@ public class ClientHandler {
         ModelOverrides.register(ItemRegistry.GC_OTS33.get(), new gc_ots33_customModel());
         ModelOverrides.register(ItemRegistry.GC_OTS33_TACTICAL.get(), new gc_ots33_tactical_customModel());
         ModelOverrides.register(ItemRegistry.GC_MAUSER_C96_TRENCH_CARBINE.get(), new gc_mauser_c96_trench_carbine_customModel());
+        ModelOverrides.register(ItemRegistry.GC_OTS33.get(), new gc_ots33_customModel());
+        ModelOverrides.register(ItemRegistry.GC_LEVER_ACTION_RIFLE_SINGLE.get(), new gc_lever_action_rifle_single_customModel());
+        ModelOverrides.register(ItemRegistry.GC_FDI_PROTOTYPE_000.get(), new gc_fdi_prototype_000_customModel());
+        ModelOverrides.register(ItemRegistry.GC_PPSH_CUSTOM.get(), new gc_ppsh_custom_customModel());
+        ModelOverrides.register(ItemRegistry.GC_AVT40_DRUM.get(), new gc_avt40_drum_customModel());
+        ModelOverrides.register(ItemRegistry.GC_MOSIN_BRAMIT.get(), new gc_mosin_bramit_customModel());
+        ModelOverrides.register(ItemRegistry.GC_FEDOROV_LMG.get(), new gc_fedorov_lmg_customModel());
+        ModelOverrides.register(ItemRegistry.GC_AB_762.get(), new gc_ab_762_customModel());
+        ModelOverrides.register(ItemRegistry.GC_AB_545.get(), new gc_ab_545_customModel());
+        ModelOverrides.register(ItemRegistry.GC_AVB_762.get(), new gc_avb_762_customModel());
+        ModelOverrides.register(ItemRegistry.GC_AVB_762_LMG.get(), new gc_avb_762_lmg_customModel());
+        ModelOverrides.register(ItemRegistry.GC_LCZ_B20.get(), new gc_lcz_b20_customModel());
+        ModelOverrides.register(ItemRegistry.GC_SVD_AF.get(), new gc_svd_af_customModel());
+        ModelOverrides.register(ItemRegistry.GC_NAGANT.get(), new SimpleModel(SpecialModels.GC_NAGANT::getModel));
+        ModelOverrides.register(ItemRegistry.GC_NAGANT_BRAMIT.get(), new SimpleModel(SpecialModels.GC_NAGANT_BRAMIT::getModel));
+        ModelOverrides.register(ItemRegistry.GC_NAGANT_SHORT.get(), new SimpleModel(SpecialModels.GC_NAGANT_SHORT::getModel));
+        ModelOverrides.register(ItemRegistry.GC_NAGANT_44.get(), new SimpleModel(SpecialModels.GC_NAGANT_44::getModel));
+        ModelOverrides.register(ItemRegistry.GC_BM59.get(), new gc_bm59_customModel());
+        ModelOverrides.register(ItemRegistry.GC_BM59_PARA.get(), new gc_bm59_para_customModel());
+        ModelOverrides.register(ItemRegistry.GC_BM59_GL.get(), new gc_bm59_gl_customModel());
+        ModelOverrides.register(ItemRegistry.GC_P38_SPECIAL.get(), new gc_p38_special_customModel());
+        ModelOverrides.register(ItemRegistry.GC_P38_AUTO_CARBINE.get(), new gc_p38_auto_carbine_customModel());
+        ModelOverrides.register(ItemRegistry.GC_AK_50_LITE.get(), new gc_ak_50_lite_customModel());
+        ModelOverrides.register(ItemRegistry.GC_NORINCO_86S.get(), new gc_norinco_86s_tactical_customModel());
+        ModelOverrides.register(ItemRegistry.GC_M1_CARBINE.get(), new gc_m1_carbine_customModel());
+        ModelOverrides.register(ItemRegistry.GC_M2_CARBINE.get(), new gc_m2_carbine_customModel());
+        ModelOverrides.register(ItemRegistry.GC_M3_CARBINE.get(), new gc_m3_carbine_customModel());
+        ModelOverrides.register(ItemRegistry.GC_M1_CARBINE_ENFORCER.get(), new gc_m1_carbine_enforcer_customModel());
+        ModelOverrides.register(ItemRegistry.GC_AKV521_CHANGABLE_UPPER.get(), new SimpleModel(SpecialModels.GC_AKV521_CHANGABLE_UPPER::getModel));
+        ModelOverrides.register(ItemRegistry.GC_AKV521_762.get(), new gc_akv521_762_customModel());
+        ModelOverrides.register(ItemRegistry.GC_AKV521_545.get(), new gc_akv521_545_customModel());
+        ModelOverrides.register(ItemRegistry.GC_AKV521_223.get(), new gc_akv521_223_customModel());
+        ModelOverrides.register(ItemRegistry.GC_AKV521_366.get(), new gc_akv521_366_customModel());
+        ModelOverrides.register(ItemRegistry.GC_WZ88.get(), new gc_wz88_customModel());
+        ModelOverrides.register(ItemRegistry.GC_PPD_34.get(), new gc_ppd_34_customModel());
+        ModelOverrides.register(ItemRegistry.GC_HCAS_AR.get(), new gc_hcas_ar_customModel());
+        ModelOverrides.register(ItemRegistry.GC_HCAS_DMR.get(), new gc_hcas_dmr_customModel());
+        ModelOverrides.register(ItemRegistry.GC_HCAS_CCW.get(), new gc_hcas_ccw_customModel());
+        ModelOverrides.register(ItemRegistry.GC_HCAS_AR_1.get(), new gc_hcas_ar_customModel());
+        ModelOverrides.register(ItemRegistry.GC_HCAS_DMR_1.get(), new gc_hcas_dmr_customModel());
+        ModelOverrides.register(ItemRegistry.GC_HCAS_CCW_1.get(), new gc_hcas_ccw_customModel());
+        ModelOverrides.register(ItemRegistry.GC_HCAS_PARTS.get(), new SimpleModel(SpecialModels.GC_HCAS_PARTS::getModel));
     }
 }

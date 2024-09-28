@@ -423,6 +423,14 @@
       }
     ]
   },
+  "item.gc_mosin_silenced.suppressed": {
+    "subtitle": "subtitle.guncollection.suppressed_fire",
+    "sounds": [
+      {
+        "name": "guncollection:item/gc_bolt_rifle_silenced"
+      }
+    ]
+  },
   "item.gc_akm.fire": {
     "subtitle": "subtitle.guncollection.regular_fire",
     "sounds": [

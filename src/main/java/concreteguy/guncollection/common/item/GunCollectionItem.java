@@ -2,9 +2,7 @@ package concreteguy.guncollection.common.item;
 
 import com.mrcrayfish.guns.common.Gun;
 import com.mrcrayfish.guns.init.ModEnchantments;
-import concreteguy.guncollection.common.item.GC_EnchantmentWrapper;
 import concreteguy.guncollection.config.Config;
-import concreteguy.guncollection.util.GC_NBTHelper;
 import com.mrcrayfish.guns.item.GunItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
@@ -18,7 +16,6 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.registries.ForgeRegistries;
 import com.mrcrayfish.guns.util.GunEnchantmentHelper;
 import net.minecraft.world.entity.player.Player;
-import concreteguy.guncollection.common.item.EnchantmentWrapperGC;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -30,15 +27,13 @@ public class GunCollectionItem extends GunItem {
     public static int NewReloadInterval;
 
     private final boolean canColor;
-    public final EnchantmentWrapperGC[] enchantments;
     /**
      * @param properties The item properties
      * @param canColor If the gun can be colored or not
      */
-    public GunCollectionItem(Properties properties, boolean canColor, EnchantmentWrapperGC[] enchantments) {
+    public GunCollectionItem(Properties properties, boolean canColor) {
         super(properties);
         this.canColor = canColor;
-        this.enchantments = enchantments;
 
     }
 

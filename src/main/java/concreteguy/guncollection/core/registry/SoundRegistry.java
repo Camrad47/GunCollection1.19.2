@@ -187,6 +187,7 @@ public final class SoundRegistry {
     public static final RegistryObject<SoundEvent> GC_45CAL_SILENCED = register("item.gc_45cal_silenced.suppressed");
     public static final RegistryObject<SoundEvent> GC_M1911 = register("item.gc_m1911_basic.fire");
     public static final RegistryObject<SoundEvent> GC_M14 = register("item.gc_m14.fire");
+    public static final RegistryObject<SoundEvent> GC_MOSIN_SILENCED = register("item.gc_mosin_silenced.suppressed");
 
     public static final RegistryObject<SoundEvent> GC_AK_COCK = register("item.gc_ak.cock");
     public static final RegistryObject<SoundEvent> GC_AR15_COCK = register("item.gc_ar15.cock");

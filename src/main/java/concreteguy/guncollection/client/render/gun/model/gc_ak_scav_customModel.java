@@ -4,7 +4,10 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mrcrayfish.guns.client.GunModel;
 import com.mrcrayfish.guns.client.render.gun.IOverrideModel;
 import com.mrcrayfish.guns.client.util.RenderUtil;
+import com.mrcrayfish.guns.common.Gun;
+import com.mrcrayfish.guns.item.attachment.IAttachment;
 import concreteguy.guncollection.client.SpecialModels;
+import concreteguy.guncollection.core.registry.ItemRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
@@ -23,6 +26,27 @@ public class gc_ak_scav_customModel implements IOverrideModel {
     {
         BakedModel bakedModel = SpecialModels.GC_AK_SCAV_MAIN.getModel();
         Minecraft.getInstance().getItemRenderer().render(stack, ItemTransforms.TransformType.NONE, false, poseStack, buffer, light, overlay, GunModel.wrap(bakedModel));
+
+        ItemStack attachmentStack = Gun.getAttachment(IAttachment.Type.STOCK, stack);
+        if(!attachmentStack.isEmpty())
+        {
+            if(Gun.getAttachment(IAttachment.Type.STOCK, stack).getItem() == ItemRegistry.GC_WOOD_STOCK.get())
+                RenderUtil.renderModel(SpecialModels.GC_AK_SCAV_PARTS_WOOD.getModel(), stack, poseStack, buffer, light, overlay);
+            if(Gun.getAttachment(IAttachment.Type.STOCK, stack).getItem() == ItemRegistry.GC_METAL_STOCK.get())
+                RenderUtil.renderModel(SpecialModels.GC_AK_SCAV_PARTS_METAL.getModel(), stack, poseStack, buffer, light, overlay);
+            if(Gun.getAttachment(IAttachment.Type.STOCK, stack).getItem() == ItemRegistry.GC_POLYMER_STOCK.get())
+                RenderUtil.renderModel(SpecialModels.GC_AK_SCAV_PARTS_POLYMER.getModel(), stack, poseStack, buffer, light, overlay);
+            if(Gun.getAttachment(IAttachment.Type.STOCK, stack).getItem() == ItemRegistry.GC_MARKSMAN_STOCK.get())
+                RenderUtil.renderModel(SpecialModels.GC_AK_SCAV_PARTS_MARKSMAN.getModel(), stack, poseStack, buffer, light, overlay);
+            if(Gun.getAttachment(IAttachment.Type.STOCK, stack).getItem() == ItemRegistry.GC_ULTRA_LIGHT_STOCK.get())
+                RenderUtil.renderModel(SpecialModels.GC_AK_SCAV_PARTS_ULTRA_LIGHT.getModel(), stack, poseStack, buffer, light, overlay);
+            if(Gun.getAttachment(IAttachment.Type.STOCK, stack).getItem() == ItemRegistry.GC_TACTICAL_SNIPER_STOCK.get())
+                RenderUtil.renderModel(SpecialModels.GC_AK_SCAV_PARTS_TACTICAL_SNIPER.getModel(), stack, poseStack, buffer, light, overlay);
+        }
+        else
+        {
+            RenderUtil.renderModel(SpecialModels.GC_AK_SCAV_PARTS_MAIN.getModel(), stack, poseStack, buffer, light, overlay);
+        }
 
         float cooldown = 0F;
         if(entity != null && entity.equals(Minecraft.getInstance().player))
